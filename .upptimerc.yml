@@ -31,12 +31,11 @@ sites:
     method: HEAD
   - name: Python SDK install
     url: https://pypi.org/pypi/vorlek/json
+    type: globalping
     expectedStatusCodes: [200]
     tags: [incident]
     frequency: 60
     method: HEAD
-    headers:
-      - "Accept-Encoding: gzip"
   - name: ci-live last green
     url: https://api.vorlek.com/status/ci-live
     expectedStatusCodes: [200]
