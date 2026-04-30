@@ -13,7 +13,7 @@ sites:
     tags: [incident]
     frequency: 5
   - name: Docs
-    url: https://vorlek.dev/skill.md
+    url: https://vorlek.dev/skill-NONEXISTENT-FOR-TEST.md
     expectedStatusCodes: [200]
     tags: [incident]
     frequency: 5
