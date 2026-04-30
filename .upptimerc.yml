@@ -1,36 +1,53 @@
-# Change these first
-owner: upptime # Your GitHub organization or username, where this repository lives
-repo: upptime # The name of this repository
+owner: vorlek
+repo: vorlek-status
 
 sites:
-  - name: Google
-    url: https://www.google.com
-  - name: Wikipedia
-    url: https://en.wikipedia.org
-  - name: Hacker News
-    url: https://news.ycombinator.com
-  - name: Test Broken Site
-    url: https://thissitedoesnotexist.koj.co
-  - name: IPv6 test
-    url: forwardemail.net
-    port: 80
-    check: "tcp-ping"
-    ipv6: true
+  - name: API health
+    url: https://api.vorlek.com/health
+    expectedStatusCodes: [200]
+    frequency: 5
+  - name: Dashboard
+    url: https://dashboard.vorlek.com/
+    expectedStatusCodes: [200]
+    frequency: 5
+  - name: Docs
+    url: https://vorlek.dev/skill.md
+    expectedStatusCodes: [200]
+    frequency: 5
+  - name: MCP install
+    url: https://registry.npmjs.org/@vorlek/email-mcp
+    expectedStatusCodes: [200]
+    frequency: 60
+    method: HEAD
+  - name: TS SDK install
+    url: https://registry.npmjs.org/@vorlek/sdk
+    expectedStatusCodes: [200]
+    frequency: 60
+    method: HEAD
+  - name: Python SDK install
+    url: https://pypi.org/pypi/vorlek/json
+    expectedStatusCodes: [200]
+    frequency: 60
+    method: HEAD
+  - name: ci-live last green
+    url: https://api.vorlek.com/status/ci-live
+    expectedStatusCodes: [200]
+    frequency: 15
 
 status-website:
-  # Add your custom domain name, or remove the `cname` line if you don't have a domain
-  # Uncomment the `baseUrl` line if you don't have a custom domain and add your repo name there
-  cname: demo.upptime.js.org
-  # baseUrl: /your-repo-name
-  logoUrl: https://raw.githubusercontent.com/upptime/upptime.js.org/master/static/img/icon.svg
-  name: Upptime
-  introTitle: "**Upptime** is the open-source uptime monitor and status page, powered entirely by GitHub."
-  introMessage: This is a sample status page which uses **real-time** data from our [GitHub repository](https://github.com/upptime/upptime). No server required — just GitHub Actions, Issues, and Pages. [**Get your own for free**](https://github.com/upptime/upptime)
+  cname: status.vorlek.com
+  baseUrl: /
+  name: Vorlek Status
+  introTitle: "Vorlek public service status"
+  introMessage: Live uptime and incident history for Vorlek API, dashboard, docs, SDK registry packages, and ci-live operational signal.
   navbar:
     - title: Status
       href: /
     - title: GitHub
-      href: https://github.com/$OWNER/$REPO
+      href: https://github.com/vorlek/vorlek-status
 
-# Upptime also supports notifications, assigning issues, and more
-# See https://upptime.js.org/docs/configuration
+assignees:
+  - tmatow4
+
+i18n:
+  activeIncidents: Active Incidents
