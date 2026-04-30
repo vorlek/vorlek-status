@@ -47,7 +47,7 @@ status-website:
   baseUrl: /
   name: Vorlek Status
   logoUrl: https://raw.githubusercontent.com/vorlek/vorlek-status/main/assets/logo.svg
-  faviconSvg: /favicon.svg
+  faviconSvg: https://raw.githubusercontent.com/vorlek/vorlek-status/main/assets/favicon.svg
   introTitle: "Vorlek public service status"
   introMessage: Live uptime and incident history for Vorlek API, dashboard, docs, SDK registry packages, and ci-live operational signal.
   navbar:
