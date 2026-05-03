@@ -14,6 +14,7 @@ This repo has replaced the legacy Upptime-generated codebase with a small Gatus 
 - `Dockerfile` — builds from the upstream `ghcr.io/twin/gatus:stable` image.
 - `fly.toml` — Fly.io app config for the `vorlek-status` app.
 - `.github/workflows/deploy.yml` — deploys `main` to Fly.io.
+- `cloudflare-pages/_worker.js` — optional Cloudflare Pages edge proxy that forwards `status.vorlek.com` to the Fly-hosted Gatus app.
 - `assets/` — Vorlek logo and favicon used by the Gatus UI.
 
 The old Upptime workflows, generated API JSON, graph images, history files, and GitHub Pages `CNAME` have been removed from `main`.
@@ -58,6 +59,12 @@ Fly also accepts a DNS-only CNAME alternative:
 
 ```text
 CNAME status.vorlek.com -> 93kn1o2.vorlek-status.fly.dev
+```
+
+If direct DNS edits are unavailable, deploy the Cloudflare Pages proxy instead:
+
+```bash
+CLOUDFLARE_API_TOKEN=... npx wrangler pages deploy cloudflare-pages --project-name vorlek-status
 ```
 
 ## Monitors
