@@ -67,6 +67,12 @@ If direct DNS edits are unavailable, deploy the Cloudflare Pages proxy instead:
 CLOUDFLARE_API_TOKEN=... npx wrangler pages deploy cloudflare-pages --project-name vorlek-status
 ```
 
+For the Pages proxy path, set the DNS record to:
+
+```text
+CNAME status.vorlek.com -> vorlek-status.pages.dev
+```
+
 ## Monitors
 
 The current monitor set mirrors the previous Upptime configuration:
