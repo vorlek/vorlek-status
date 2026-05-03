@@ -1,0 +1,92 @@
+web:
+  port: 8080
+
+metrics: true
+concurrency: 3
+
+ui:
+  title: "Vorlek Status"
+  description: "Live health for Vorlek public services, SDK packages, MCP package, and operational signals."
+  dashboard-heading: "Vorlek Status"
+  dashboard-subheading: "Live health for Vorlek API, dashboard, docs, SDK packages, MCP package, and ci-live operational signal."
+  header: "Vorlek Status"
+  logo: "https://raw.githubusercontent.com/vorlek/vorlek-status/main/assets/logo.svg"
+  link: "https://vorlek.dev/"
+  favicon:
+    default: "https://raw.githubusercontent.com/vorlek/vorlek-status/main/assets/favicon.svg"
+    size16x16: "https://raw.githubusercontent.com/vorlek/vorlek-status/main/assets/favicon.svg"
+    size32x32: "https://raw.githubusercontent.com/vorlek/vorlek-status/main/assets/favicon.svg"
+  dark-mode: false
+  default-sort-by: group
+  buttons:
+    - name: "Vorlek Dev"
+      link: "https://vorlek.dev/"
+    - name: "Dashboard"
+      link: "https://dashboard.vorlek.com/"
+    - name: "GitHub"
+      link: "https://github.com/vorlek/vorlek-status"
+
+storage:
+  type: sqlite
+  path: /data/gatus.db
+  caching: true
+  maximum-number-of-results: 200
+  maximum-number-of-events: 100
+
+announcements:
+  - timestamp: 2026-05-02T00:00:00Z
+    type: information
+    message: "Vorlek Status is moving from the legacy Upptime site to a self-hosted Gatus status page."
+
+endpoints:
+  - name: API health
+    group: Core
+    url: "https://api.vorlek.com/health"
+    interval: 5m
+    conditions:
+      - "[STATUS] == 200"
+
+  - name: Dashboard
+    group: Core
+    url: "https://dashboard.vorlek.com/"
+    interval: 5m
+    conditions:
+      - "[STATUS] == 200"
+
+  - name: Docs
+    group: Core
+    url: "https://vorlek.dev/SKILL.md"
+    interval: 5m
+    conditions:
+      - "[STATUS] == 200"
+
+  - name: ci-live last green
+    group: Operations
+    url: "https://api.vorlek.com/status/ci-live"
+    interval: 15m
+    conditions:
+      - "[STATUS] == 200"
+
+  - name: MCP install
+    group: Distribution
+    url: "https://registry.npmjs.org/@vorlek/email-mcp"
+    method: HEAD
+    interval: 60m
+    conditions:
+      - "[STATUS] == 200"
+
+  - name: TS SDK install
+    group: Distribution
+    url: "https://registry.npmjs.org/@vorlek/sdk"
+    method: HEAD
+    interval: 60m
+    conditions:
+      - "[STATUS] == 200"
+
+  - name: Python SDK install
+    group: Distribution
+    url: "https://pypi.org/pypi/vorlek/json"
+    method: HEAD
+    interval: 60m
+    conditions:
+      - "[STATUS] == 200"
