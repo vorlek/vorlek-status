@@ -18,6 +18,106 @@ ui:
     size32x32: "https://raw.githubusercontent.com/vorlek/vorlek-status/main/assets/favicon.svg"
   dark-mode: false
   default-sort-by: group
+  custom-css: |-
+    header.border-b {
+      background: #ffffff !important;
+      backdrop-filter: none !important;
+    }
+
+    header > .container {
+      box-sizing: border-box !important;
+      max-width: 1280px !important;
+      height: 4rem !important;
+      padding: 0 1.5rem !important;
+    }
+
+    header > .container > .flex {
+      height: 4rem !important;
+      align-items: center !important;
+    }
+
+    header a[href="https://vorlek.dev/"].flex {
+      height: 4rem !important;
+      gap: 0.75rem !important;
+      color: #020817 !important;
+      text-decoration: none !important;
+    }
+
+    header a[href="https://vorlek.dev/"] > div:first-child {
+      width: 2.75rem !important;
+      height: 2.75rem !important;
+      flex: 0 0 auto !important;
+    }
+
+    header a[href="https://vorlek.dev/"] img {
+      display: block !important;
+      width: 2.75rem !important;
+      height: 2.75rem !important;
+      border: 1px solid #e2e8f0 !important;
+      border-radius: 0.5rem !important;
+      background: #ffffff !important;
+      object-fit: contain !important;
+    }
+
+    header a[href="https://vorlek.dev/"] h1 {
+      font-size: 1rem !important;
+      font-weight: 700 !important;
+      line-height: 1 !important;
+      letter-spacing: -0.025em !important;
+      color: #020817 !important;
+    }
+
+    header a[href="https://vorlek.dev/"] p {
+      display: none !important;
+    }
+
+    header nav {
+      gap: 0.25rem !important;
+    }
+
+    header nav a {
+      display: inline-flex !important;
+      height: 2.25rem !important;
+      align-items: center !important;
+      border: 1px solid transparent !important;
+      border-radius: 0.375rem !important;
+      padding: 0 0.75rem !important;
+      color: #64748b !important;
+      font-size: 0.875rem !important;
+      font-weight: 500 !important;
+      line-height: 1.25rem !important;
+      text-decoration: none !important;
+    }
+
+    header nav a:hover {
+      border-color: #e2e8f0 !important;
+      background: #f1f5f9 !important;
+      color: #020817 !important;
+    }
+
+    html.dark header.border-b {
+      background: #020817 !important;
+    }
+
+    html.dark header a[href="https://vorlek.dev/"].flex,
+    html.dark header a[href="https://vorlek.dev/"] h1 {
+      color: #f8fafc !important;
+    }
+
+    html.dark header a[href="https://vorlek.dev/"] img {
+      border-color: #1e293b !important;
+      background: #020817 !important;
+    }
+
+    html.dark header nav a {
+      color: #94a3b8 !important;
+    }
+
+    html.dark header nav a:hover {
+      border-color: #1e293b !important;
+      background: #1e293b !important;
+      color: #f8fafc !important;
+    }
   buttons:
     - name: "Vorlek Dev"
       link: "https://vorlek.dev/"
