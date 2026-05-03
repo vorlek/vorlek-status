@@ -11,7 +11,7 @@ ui:
   dashboard-subheading: "Live health for Vorlek API, dashboard, docs, SDK packages, MCP package, and ci-live operational signal."
   header: "Vorlek Status"
   logo: "https://raw.githubusercontent.com/vorlek/vorlek-status/main/assets/logo.svg"
-  link: "https://vorlek.dev/"
+  link: "/"
   favicon:
     default: "https://raw.githubusercontent.com/vorlek/vorlek-status/main/assets/favicon.svg"
     size16x16: "https://raw.githubusercontent.com/vorlek/vorlek-status/main/assets/favicon.svg"
@@ -31,25 +31,32 @@ ui:
       padding: 0 1.5rem !important;
     }
 
+    .container.max-w-7xl {
+      box-sizing: border-box !important;
+      max-width: 1280px !important;
+      padding-left: 1.5rem !important;
+      padding-right: 1.5rem !important;
+    }
+
     header > .container > .flex {
       height: 4rem !important;
       align-items: center !important;
     }
 
-    header a[href="https://vorlek.dev/"].flex {
+    header a.flex.items-center.gap-3 {
       height: 4rem !important;
       gap: 0.75rem !important;
       color: #020817 !important;
       text-decoration: none !important;
     }
 
-    header a[href="https://vorlek.dev/"] > div:first-child {
+    header a.flex.items-center.gap-3 > div:first-child {
       width: 2.75rem !important;
       height: 2.75rem !important;
       flex: 0 0 auto !important;
     }
 
-    header a[href="https://vorlek.dev/"] img {
+    header a.flex.items-center.gap-3 img {
       display: block !important;
       width: 2.75rem !important;
       height: 2.75rem !important;
@@ -59,7 +66,7 @@ ui:
       object-fit: contain !important;
     }
 
-    header a[href="https://vorlek.dev/"] h1 {
+    header a.flex.items-center.gap-3 h1 {
       font-size: 1rem !important;
       font-weight: 700 !important;
       line-height: 1 !important;
@@ -67,7 +74,7 @@ ui:
       color: #020817 !important;
     }
 
-    header a[href="https://vorlek.dev/"] p {
+    header a.flex.items-center.gap-3 p {
       display: none !important;
     }
 
@@ -99,12 +106,12 @@ ui:
       background: #020817 !important;
     }
 
-    html.dark header a[href="https://vorlek.dev/"].flex,
-    html.dark header a[href="https://vorlek.dev/"] h1 {
+    html.dark header a.flex.items-center.gap-3,
+    html.dark header a.flex.items-center.gap-3 h1 {
       color: #f8fafc !important;
     }
 
-    html.dark header a[href="https://vorlek.dev/"] img {
+    html.dark header a.flex.items-center.gap-3 img {
       border-color: #1e293b !important;
       background: #020817 !important;
     }
