@@ -19,6 +19,10 @@ ui:
   dark-mode: false
   default-sort-by: group
   custom-css: |-
+    html {
+      scrollbar-gutter: stable !important;
+    }
+
     header.border-b {
       background: #ffffff !important;
       backdrop-filter: none !important;
