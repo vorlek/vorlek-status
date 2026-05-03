@@ -33,11 +33,6 @@ storage:
   maximum-number-of-results: 200
   maximum-number-of-events: 100
 
-announcements:
-  - timestamp: 2026-05-02T00:00:00Z
-    type: information
-    message: "Vorlek Status is moving from the legacy Upptime site to a self-hosted Gatus status page."
-
 endpoints:
   - name: API health
     group: Core
