@@ -6,6 +6,9 @@ Production URL: [status.vorlek.com](https://status.vorlek.com)
 
 Fly URL: [vorlek-status.fly.dev](https://vorlek-status.fly.dev)
 
+Release history lives in [`CHANGELOG.md`](./CHANGELOG.md). Update it alongside
+major monitor, deploy, and status-page UI changes.
+
 ## What Runs Here
 
 This repo has replaced the legacy Upptime-generated codebase with a small Gatus deployment:
